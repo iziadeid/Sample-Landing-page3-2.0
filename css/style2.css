@@ -1,0 +1,693 @@
+/* Start Qlobal Rule */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    color: whitesmoke;
+    border: 1px solid transparent;
+    display: block;
+    width: fit-content;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    background-color: indianred;
+    transition: 1s;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: indianred;
+}
+
+@media (max-width:767px) {
+    .btn {
+        padding: 5px 10px;
+        font-size: 17px
+    }
+
+}
+
+.text .btn {
+    margin: 20px auto;
+}
+
+/* End Qlobal Rule */
+
+body {
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(../image/bac4.jpg);
+    position: relative;
+    background-size: cover;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+.nav {
+    width: 100vw;
+    height: 130px;
+    position: fixed;
+    z-index: 3;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 30px 30px black;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+.nav .logo {
+    padding: 30px;
+    font-size: 45px;
+}
+
+.nav .logo .s1 {
+    font-size: 50px;
+    color: indianred;
+}
+
+.nav .links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.nav .links li a {
+    padding: 20px;
+    color: whitesmoke;
+    font-size: 20px;
+    transition: 1s;
+    position: relative;
+}
+
+.nav .links li a::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: indianred;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.nav .links li a:hover {
+    color: indianred;
+}
+
+.nav .links li a:hover::after {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+.nav .b1 {
+    border-radius: 6px;
+}
+
+@media (max-width:767px) {
+    .nav {
+        padding-left: 0;
+        justify-content: space-between;
+    }
+
+    .nav .links {
+        display: none;
+    }
+}
+
+.home {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .text {
+    text-align: center;
+}
+
+.home .text h4 {
+    font-size: 18px;
+    letter-spacing: 5px;
+}
+
+.home .text h1 {
+    font-size: 3.5em;
+    margin-top: 20px;
+}
+
+.home .text .b2:hover {
+    border: 1px solid indianred;
+}
+
+/* STart About */
+.about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.about .text {
+    text-align: center;
+    max-width: 650px;
+    letter-spacing: 5px;
+}
+
+.about .text h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.about .text p {
+    line-height: 1.6;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width:767px) {
+    .about .text p {
+        font-size: 15px;
+    }
+
+}
+
+/* End About */
+
+/* Start explore */
+.explore {
+    min-height: 100vh;
+    text-align: center;
+    font-weight: normal;
+    padding-top: 150px;
+    position: relative;
+}
+
+.explore>h1 {
+    letter-spacing: 6px;
+    font-size: 45px;
+    font-weight: normal;
+
+}
+
+.explore>p {
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+.explore .container {
+    position: relative;
+    width: 80%;
+    height: 650px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.explore .container .iteams {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.explore .container .iteams .box {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 55%);
+    transition: 0.5s;
+    background-color: #0e121266;
+}
+
+.explore .container .iteams .box:nth-child(3) {
+    transform: translateY(-19%);
+}
+
+.explore .container .iteams .box:nth-child(even) {
+    transform: translateY(-10%);
+}
+
+.explore .container .iteams .box .image {
+    overflow: hidden;
+}
+
+.explore .container .iteams .box .image img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.explore .container .iteams .box .image img:hover {
+    filter: blur(2px);
+    transform: scale(1.4);
+}
+
+.explore .container .iteams .box .text {
+    padding: 20px 10px;
+    letter-spacing: 2px;
+    text-align: start;
+}
+
+.explore .container .iteams .box .text h3 {
+    margin: 0 10px 10px;
+    font-weight: normal;
+}
+
+.explore .change {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 60%;
+    transition: 0.4s;
+    opacity: .5;
+}
+
+.explore .change:hover {
+    opacity: .9;
+}
+
+.right {
+    right: 7%;
+    border-top: 3px solid whitesmoke;
+    border-right: 3px solid whitesmoke;
+    transform: rotate(45deg);
+}
+
+.left {
+    border-bottom: 3px solid whitesmoke;
+    border-left: 3px solid whitesmoke;
+    left: 7%;
+    transform: rotate(45deg);
+}
+
+.explore .bullets {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+}
+
+.explore .bullets li {
+    width: 15px;
+    height: 15px;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+    margin-right: 8px;
+    opacity: .4;
+    transition: 0.4s;
+}
+
+.explore .bullets li:hover {
+    opacity: .9;
+    transform: translateY(-4px);
+
+}
+
+@media (max-width:767px) {
+    .explore>h1 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 35px;
+    }
+
+    .explore>p {
+        font-size: 18px;
+        letter-spacing: 4px;
+    }
+
+    .explore .change {
+        display: none;
+    }
+
+    .explore .container .iteams .box:nth-child(even),
+    .explore .container .iteams .box:nth-child(3) {
+        transform: translateY(0);
+    }
+
+    .explore .container {
+        margin-top: 20px;
+        height: 58vh;
+        overflow: auto;
+        align-items: flex-start;
+    }
+
+    .explore .container .iteams {
+        flex-direction: column;
+    }
+
+    .explore .bullets {
+        bottom: 0;
+    }
+}
+
+/* End explore */
+/* Start Contect */
+.contact {
+    min-height: calc(100vh - 41px);
+    display: flex;
+}
+
+.contact .text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 4px;
+}
+
+.contact h1 {
+    font-size: 65px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.contact .contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex-basis: 50%;
+}
+
+@media (max-width:767px) {
+    .contact .text {
+        display: none;
+    }
+
+    .contact .contact-details {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        flex-basis: 100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .contact .contact-details .form {
+        width: 75% !important;
+    }
+}
+
+.contact .contact-details .form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact .contact-details h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    font-weight: normal;
+}
+
+.contact .contact-details .form .input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    background-color: #f9f9f900;
+}
+
+.contact .contact-details .form textarea {
+    width: 70%;
+    resize: none;
+    height: 150px;
+}
+
+.contact .contact-details .form .btn {
+    width: fit-content;
+}
+
+.contact .contact-details .form .btn:hover {
+    border-color: transparent;
+    color: indianred;
+}
+
+.contact .contact-details .form .input::placeholder {
+    color: whitesmoke;
+    opacity: .6;
+    transition: 0.4s;
+    position: relative;
+}
+
+
+
+.contact .contact-details .form .input:focus {
+    outline: none;
+    border-bottom-color: indianred;
+}
+
+.contact .contact-details .form .input:focus::placeholder {
+    color: indianred;
+    opacity: 1;
+}
+
+.contact .contact-details .form .input:hover::placeholder {
+    opacity: 1;
+
+}
+
+/* end Contect */
+/* Start Sign */
+.sign-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 4px;
+}
+
+.sign-page .login-form {
+
+    width: 40vw;
+    background-color: #0000009c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+
+}
+
+.sign-page .login-form .btn-div {
+    display: flex;
+    padding: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sign-page .login-form .btn-div a {
+    color: whitesmoke;
+    font-size: 24px;
+    position: relative;
+    padding: 20px 10px;
+    transition: 0.4s;
+}
+
+.sign-page .login-form .btn-div a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: indianred;
+    left: 10px;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.sign-page .login-form .btn-div a:hover {
+    color: indianred;
+}
+
+.sign-page .login-form .btn-div a:hover::after {
+    width: 80%;
+}
+
+.sign-page .login-form .btn-div .active {
+    color: indianred;
+}
+
+.sign-page .login-form .btn-div .active::after {
+    width: 60%;
+}
+
+.sign-page .login-form .form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+}
+
+.sign-page .login-form .form .input {
+    padding: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    opacity: .5;
+    transition: 0.4s;
+}
+
+.sign-page .login-form .form .input:hover {
+    opacity: 1;
+}
+
+.sign-page .login-form .form .input::placeholder {
+    color: whitesmoke;
+}
+
+.sign-page .login-form .form .input:focus {
+    border-bottom-color: indianred;
+    outline: none;
+    opacity: 1;
+
+}
+
+.sign-page .login-form .form .input:focus::placeholder {
+    color: indianred;
+}
+
+.sign-page .login-form .form .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.sign-page .login-form .form .info a,
+.sign-page .login-form .form .info label {
+    transition: 0.4s;
+    color: gray;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+}
+
+.sign-page .login-form .form .info label:hover,
+.sign-page .login-form .form .info a:hover {
+    color: indianred;
+}
+
+.sign-page .btn {
+    margin: auto;
+}
+
+@media (max-width:767px) {
+
+    #signup-page {
+        align-items: flex-end;
+        height: 90vh;
+    }
+
+    .sign-page .login-form {
+        width: 90%;
+        padding: 40px 10px;
+        grid-area: 25px;
+
+    }
+
+    #signup-page .login-form {
+        padding: 20px 10px;
+    }
+
+    .sign-page .login-form .btn-div {
+        padding: 0 25px 25px;
+    }
+
+    .sign-page .login-form .btn-div a {
+        padding: 20px 0;
+    }
+
+    .sign-page .login-form .btn-div a::after {
+        left: 0;
+    }
+
+    .sign-page .login-form .form .info a,
+    .sign-page .login-form .form .info label {
+        font-size: 13px;
+        align-items: center;
+        display: flex;
+        gap: 5px;
+    }
+
+    .sign-page .login-form .form .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .sign-page .login-form .form .input {
+        padding: 15px;
+    }
+}
+
+/* End Sign */
+
+/* Start footer */
+.footer {
+    text-align: center;
+    color: gray;
+    background-color: #0e121266;
+    padding: 12px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #C7C7C7;
+    letter-spacing: 2px;
+}
+
+.footer span {
+    font-size: 18px;
+}
+
+@media (max-width:767px) {
+    .footer {
+        height: 80px;
+    }
+
+    .footer p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+}
+
+/* End footer */
